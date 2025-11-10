@@ -37,16 +37,10 @@ The frontend leverages:
 ## Backend Setup 🛠️
 
 1. **Clone the repository:**
-   `git clone https://github.com/yourusername/your-repo.git`
+   `git clone https://github.com/okukucephasna/CampusReg.git`
    `cd your-repo`
 
 ---
-
-✅ **Now it will render as clean formatted text** — not a copyable code snippet block.
-
-Would you like me to include the **frontend setup and run instructions** section right after this (also in the same clean, non-code-block style)?
-
-
 > The backend will automatically create the `users` table if it doesn’t exist.
 
 ---
