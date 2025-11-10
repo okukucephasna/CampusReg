@@ -181,13 +181,12 @@ Authorization: Bearer your_jwt_token_here
 ---
 
 ## Architecture Diagram 🏗️
-
 ```mermaid
-flowchart LR
-    A[React Frontend] -->|Axios HTTP Requests| B[Flask Backend (API)]
-    B -->|Query/Update| C[PostgreSQL Database]
-    B -->|Generate JWT| A
-    A -->|Send JWT in Headers| B
+graph LR
+A[React Frontend] -->|Sends Request (Axios)| B[Flask Backend (API)]
+B -->|Queries| C[(PostgreSQL Database)]
+C -->|Returns Data| B
+B -->|Responds with JSON| A
 ```
 
 **Explanation:**
