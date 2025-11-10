@@ -1,8 +1,3 @@
-Perfect! Here’s a **final, polished `README.md`** for **CampusReg**, fully GitHub-ready, with the **Mermaid architecture diagram** embedded. You can copy-paste this directly.
-
----
-
-````markdown
 # CampusReg – Full-Stack Course Registration System 🔒
 
 **CampusReg** is a full-stack **course registration system** featuring a **React frontend** and a **Flask + PostgreSQL backend**.  
