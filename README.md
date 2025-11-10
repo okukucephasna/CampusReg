@@ -1,80 +1,51 @@
-````markdown
 # CampusReg – Full-Stack Course Registration System 🔒
 
-**CampusReg** is a full-stack **course registration system** featuring a **React frontend** and a **Flask + PostgreSQL backend**.  
+**CampusReg** is a full-stack **course registration system** featuring a **React frontend** and a **Flask + PostgreSQL backend**.
 It provides secure user registration and login using **JWT authentication**, with hashed passwords and environment variables for sensitive info.
 
 The frontend leverages:
 
-- **React** – Modern UI library  
-- **Axios** – For HTTP requests to the backend  
-- **React Router DOM** – For client-side routing  
-- **Tailwind CSS** – Utility-first styling  
-- **Bootstrap** – Responsive components  
+* **React** – Modern UI library
+* **Axios** – For HTTP requests to the backend
+* **React Router DOM** – For client-side routing
+* **Tailwind CSS** – Utility-first styling
+* **Bootstrap** – Responsive components
 
 ---
 
 ## Features ✨
 
-- User registration (`/api/signup`)  
-- User login with JWT token (`/api/login`)  
-- JWT-protected route to get user info (`/api/user`)  
-- PostgreSQL database integration  
-- Password hashing with Werkzeug  
-- Environment variables for credentials and secret key  
-- Modern React frontend using Axios, Tailwind, Bootstrap, and React Router  
+* User registration (`/api/signup`)
+* User login with JWT token (`/api/login`)
+* JWT-protected route to get user info (`/api/user`)
+* PostgreSQL database integration
+* Password hashing with Werkzeug
+* Environment variables for credentials and secret key
+* Modern React frontend using Axios, Tailwind, Bootstrap, and React Router
 
 ---
 
 ## Prerequisites ⚡
 
-- Python 3.10+  
-- PostgreSQL  
-- Node.js & npm/yarn  
-- `pip`  
+* Python 3.10+
+* PostgreSQL
+* Node.js & npm/yarn
+* pip
 
 ---
 
 ## Backend Setup 🛠️
 
 1. **Clone the repository:**
+   `git clone https://github.com/yourusername/your-repo.git`
+   `cd your-repo`
 
-```bash
-git clone https://github.com/yourusername/your-repo.git
-cd your-repo
-````
+---
 
-2. **Create and activate a virtual environment:**
+✅ **Now it will render as clean formatted text** — not a copyable code snippet block.
 
-```bash
-python -m venv venv
-# Linux / macOS
-source venv/bin/activate
-# Windows
-venv\Scripts\activate
-```
+Would you like me to include the **frontend setup and run instructions** section right after this (also in the same clean, non-code-block style)?
 
-3. **Install backend dependencies:**
-
-```bash
-pip install -r requirements.txt
-```
-
-4. **Create a `.env` file** in the project root:
-
-```
-DB_HOST=localhost
-DB_NAME=your_db_name
-DB_USER=your_db_user
-DB_PASSWORD=your_db_password
-SECRET_KEY=yoursecretkey
-```
-
-5. **Run the Flask backend:**
-
-```bash
-python app.py
-```
 
 > The backend will automatically create the `users` table if it doesn’t exist.
 
