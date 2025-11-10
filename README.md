@@ -219,7 +219,3 @@ MIT License © 2025
 
 This version is **complete, professional, and visually structured** for GitHub.  
 
-If you want, I can also **add a small section showing example React Axios calls** for signup and login, so anyone can immediately test the API from the frontend.  
-
-Do you want me to add that?
-```
