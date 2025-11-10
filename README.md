@@ -142,9 +142,6 @@ Authorization: Bearer your_jwt_token_here
   }
 }
 ```
-
----
-
 ## Architecture Diagram 🏗️
 ```mermaid
 graph LR
