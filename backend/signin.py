@@ -26,7 +26,10 @@ def login():
     cursor.close()
     conn.close()
 
-    if not result or not check_password_hash(result[0], password):
+    if not result:
+        return jsonify({"success": False, "message": "Invalid credentials"}), 401
+
+    if not check_password_hash(result[0], password):
         return jsonify({"success": False, "message": "Invalid credentials"}), 401
 
     token = jwt.encode(

@@ -1,18 +1,17 @@
-# Use an official Python image
 FROM python:3.10-slim
 
-# Set working directory
 WORKDIR /app
 
-# Copy dependency file and install requirements
+# Copy requirements first
 COPY requirements.txt .
+
+# Upgrade pip, setuptools, and wheel
+RUN python -m pip install --upgrade pip setuptools wheel
+
+# Install dependencies
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy backend source code
+# Copy the rest of the backend code
 COPY . .
 
-# Expose Flask port
-EXPOSE 8080
-
-# Run the Flask app
 CMD ["python", "app.py"]

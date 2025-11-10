@@ -1,5 +1,5 @@
 import axios from "axios";
 
 export const api = axios.create({
-  baseURL: "http://127.0.0.1:8080/api", // ✅ Flask backend running on port 8080
+  baseURL: "http://backend:8080/api", // ✅ Docker network hostname for Flask
 });

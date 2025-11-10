@@ -4,7 +4,8 @@ from db import get_db_connection
 from dotenv import load_dotenv
 import os
 
-load_dotenv()  # Load environment variables from .env
+load_dotenv()
+SECRET_KEY = os.getenv("SECRET_KEY")
 
 signup_bp = Blueprint("signup", __name__)
 
@@ -17,8 +18,7 @@ def signup():
     if not username or not password:
         return jsonify({"success": False, "message": "Username and password required"}), 400
 
-    # Hash the password before storing
-    hashed_password = generate_password_hash(password, method='pbkdf2:sha256', salt_length=16)
+    hashed_password = generate_password_hash(password)
 
     conn = get_db_connection()
     cursor = conn.cursor()
@@ -28,7 +28,7 @@ def signup():
     if cursor.fetchone():
         cursor.close()
         conn.close()
-        return jsonify({"success": False, "message": "Username already exists"}), 400
+        return jsonify({"success": False, "message": "Username already exists"}), 409
 
     # Insert new user
     cursor.execute(
@@ -39,4 +39,4 @@ def signup():
     cursor.close()
     conn.close()
 
-    return jsonify({"success": True, "message": "User registered successfully"})
+    return jsonify({"success": True, "message": "User created successfully"})
